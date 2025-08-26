@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Icon.png" type="image/jpg">
+    <title>About Us - Movie Recommendation System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar glass">
+        <div class="navbar-left">
+            <img src="Icon.png" alt="Logo" class="logo-img" />
+            <span class="logo-text">MoodyMovies</span>
+        </div>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero glass">
+        <h1>🎬 About Us</h1>
+        <p>
+            Our <strong>Movie Recommendation System</strong> is an innovative AI-powered project
+            developed as part of the <b>Artificial Intelligence</b> course.
+            It leverages <b>Machine Learning (ML)</b> and
+            <b>Natural Language Processing (NLP)</b> techniques
+            to recommend movies based on user <b>mood, keywords, or actor preferences</b>.
+            The system includes an <b>Emotion Classifier</b> that analyzes text input
+            (e.g., <i>“I want something adventurous with unexpected twists”</i>)
+            and maps it to emotions such as <i>happy, sad, curious, or excited</i>.
+            These detected moods are then linked to suitable movie genres,
+            ensuring a more personalized movie discovery experience.
+        </p>
+        <br>
+        <p>
+            To build this system, we used a curated <b>movie dataset</b> integrated with metadata
+            from the <b>Hugging Face datasets API</b>, along with a custom
+            <b>emotion dataset (emotion_dataset_raw.csv)</b> for training the mood classifier.
+            The backend is powered by <b>Flask</b> with <b>REST APIs</b>, and the frontend is designed
+            with modern <b>HTML, CSS (Glassmorphism design)</b>, and <b>JavaScript</b> for interactivity.
+            This combination of technologies demonstrates how <b>AI and ML</b> can be applied to real-world
+            entertainment systems, making movie recommendations smarter, adaptive, and user-friendly.
+        </p>
+    </div>
+    <footer class="footer glass">
+        <div class="footer-content">
+            <p class="footer-desc">
+                🎓 This is Semester 6 AI/NLP project demonstrates how <b>Machine Learning, Natural Language Processing, and
+                    Emotion
+                    Detection</b> can be combined to build a personalized movie recommender system based on mood, and
+                keywords.
+            </p>
+            <hr class="footer-separator">
+            <p class="footer-copy">
+                © Ridham Patel | All rights reserved <br>
+                <span id="currentDateTime"></span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById("currentDateTime").textContent = now.toString();
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+
+</html>

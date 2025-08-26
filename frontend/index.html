@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Movie Recommender</title>
+  <link rel="shortcut icon" href="Icon.png" type="image/jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar glass">
+    <div class="navbar-left">
+      <img src="Icon.png" alt="Logo" class="logo-img" />
+      <span class="logo-text">MoodyMovies</span>
+    </div>
+    <div class="navbar-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+
+  <section class="hero glass">
+    <h1>Welcome to Movie Recommender</h1>
+    <p>✨ Get personalized movie suggestions using <b>NLP + Emotion Detection</b></p>
+  </section>
+
+  <section class="search-box glass">
+    <div class="search-row">
+      <!-- Switch instead of dropdown -->
+      <div class="switch-container">
+        <div class="switch-option active" data-value="Mood">Mood</div>
+        <div class="switch-option" data-value="Keyword">Title</div>
+        <div class="switch-slider"></div>
+      </div>
+      <script>
+        const options = document.querySelectorAll(".switch-option");
+        const slider = document.querySelector(".switch-slider");
+
+        // default value
+        window.searchType = "Mood";
+
+        options.forEach((opt, index) => {
+          opt.addEventListener("click", () => {
+            document.querySelector(".switch-option.active").classList.remove("active");
+            opt.classList.add("active");
+
+            // Clean movement
+            slider.style.left = index === 0 ? "0%" : "50%";
+
+            // Store selected type
+            window.searchType = opt.getAttribute("data-value");
+          });
+        });
+      </script>
+
+      <!-- Input box -->
+      <input id="userInput" type="text" placeholder=" Enter mood or keyword" />
+
+      <!-- Recommend button -->
+      <button id="goBtn">Recommend</button>
+    </div>
+  </section>
+
+
+  <section id="moodRow"></section>
+  <section id="movieGrid" class="movie-grid">
+  </section>
+
+
+  <footer class="footer glass">
+    <div class="footer-content">
+      <p class="footer-desc">
+        🎓 This is Semester 6 AI/NLP project demonstrates how <b>Machine Learning, Natural Language Processing, and
+          Emotion
+          Detection</b> can be combined to build a personalized movie recommender system based on mood, and keywords.
+      </p>
+      <hr class="footer-separator">
+      <p class="footer-copy">
+        © Ridham Patel | All rights reserved <br>
+        <span id="currentDateTime"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById("currentDateTime").textContent = now.toString();
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+  </script>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

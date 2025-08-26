@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Icon.png" type="image/jpg">
+    <title>Contact Us - Movie Recommendation System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar glass">
+        <div class="navbar-left">
+            <img src="Icon.png" alt="Logo" class="logo-img" />
+            <span class="logo-text">MoodyMovies</span>
+        </div>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="hero glass">
+        <h1>📩 Contact Us</h1>
+
+        <div class="contact-card">
+            <p><b>Name:</b> Ridham Patel</p>
+            <p><b>Roll No:</b> 313</p>
+            <p><b>Batch:</b> D-2</p>
+            <p><b>Enrollment:</b> 220021171310092</p>
+            <p><b>Project Name:</b> Movie Recommendation System</p>
+            <p><b>Subject:</b> Artificial Intelligence</p>
+        </div>
+    </div>
+
+    <footer class="footer glass">
+        <div class="footer-content">
+            <p class="footer-desc">
+                🎓 This is Semester 6 AI/NLP project demonstrates how <b>Machine Learning, Natural Language Processing, and
+                    Emotion
+                    Detection</b> can be combined to build a personalized movie recommender system based on mood, and
+                keywords.
+            </p>
+            <hr class="footer-separator">
+            <p class="footer-copy">
+                © Ridham Patel | All rights reserved <br>
+                <span id="currentDateTime"></span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById("currentDateTime").textContent = now.toString();
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+
+</html>
