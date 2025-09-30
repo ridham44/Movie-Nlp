@@ -1,3 +1,4 @@
+<img width="1881" height="955" alt="Screenshot (54)" src="https://github.com/user-attachments/assets/47ebe19b-cd10-4a80-9974-d27afae80c30" />
 ## Movie NLP – MoodyMovies
 
 An end-to-end demo that recommends movies from your mood or keywords using NLP-based emotion detection on the backend and a lightweight frontend UI.
